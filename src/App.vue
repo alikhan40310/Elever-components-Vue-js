@@ -27,7 +27,7 @@ export default {
 };
 </script>
 
-<template>
+<template >
   <main class="container">
     <div class="itemsCenter">
       <div class="row">
@@ -35,7 +35,7 @@ export default {
           <Bars></Bars>
         </div>
         <div class="col-md-8">
-          <!-- <Experience></Experience> -->
+          <Experience></Experience>
         </div>
       </div>
     </div>
@@ -55,7 +55,6 @@ export default {
 }
 main {
   height: 100vh;
-  margin: 10rem 0;
-  /* margin: 0 auto; */
+   margin-top: 10rem; 
 }
 </style>
