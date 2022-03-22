@@ -11,7 +11,10 @@
         v-for="(progressBar, index) in progressBars"
         :key="index"
       >
-        <div class="item cus-bg p-3" >
+        <div
+          class="item p-3"
+          :class="progressBar.color, progressBar.textColor"
+        >
           <div class="d-flex">
             <p class="pr-2">{{ progressBar.progress }}%</p>
             <p class="">{{ progressBar.install }}</p>
@@ -36,17 +39,18 @@ export default {
         {
           progress: 0.0,
           install: "Android",
-          color: "bg-success",
+          color: "cus-bg",
         },
         {
           progress: 0.1,
           install: "iOS",
-          color: "bg-warning",
+          color: "bg-info",
+          textColor: "text-white",
         },
         {
           progress: 0.3,
           install: "Web",
-            color: "bg-danger",
+          color: "bg-warning",
         },
       ],
     };

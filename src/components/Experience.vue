@@ -9,8 +9,8 @@
             v-for="(experience, index) in experiences"
             :key="index"
           >
-            <div class="main roundedd-full col-md-12 mt-5">
-              <div class="inner">
+            <div class="main rounded-full col-md-12 mt-5">
+              <div class="inner" :class="experience.color">
                 <h4>{{ experience.mainTitle }}</h4>
                 <h2>{{ experience.value }}</h2>
               </div>
@@ -43,6 +43,7 @@ export default {
           detail: "6 groups, 32 students",
           group: "6 groups",
           student: "32 students",
+          color: "bg-danger",
         },
         {
           mainTitle: "experience",
@@ -51,6 +52,8 @@ export default {
           detail: "6 groups, 32 students",
           group: "6 groups",
           student: "32 students",
+          color: "bg-info",
+
         },
         {
           mainTitle: "experience",
@@ -59,6 +62,7 @@ export default {
           detail: "6 groups, 32 students",
           group: "6 groups",
           student: "32 students",
+          color: "bg-warning",
         },
         {
           mainTitle: "experience",
@@ -67,6 +71,7 @@ export default {
           detail: "6 groups, 32 students",
           group: "6 groups",
           student: "32 students",
+          color: "bg-success",
         },
       ],
     };
