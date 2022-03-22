@@ -1,81 +1,61 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+// import bars
+import Bars from "./components/Bars.vue";
+// import experience
+import Experience from "./components/Experience.vue";
+// import bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+
+export default {
+  name: "App",
+  components: {
+    Bars,
+    Experience,
+  },
+  data() {
+    return {
+      title: "Hello Vue!",
+      message: "This is a message from the App component",
+      show: true,
+    };
+  },
+  methods: {
+    MyFunction() {
+      // this.show = !this.show;
+    },
+  },
+};
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <main class="container">
+    <div class="itemsCenter">
+      <div class="row">
+        <div class="col-md-4">
+          <Bars></Bars>
+        </div>
+        <div class="col-md-8">
+          <!-- <Experience></Experience> -->
+        </div>
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
   </main>
 </template>
 
 <style>
-@import './assets/base.css';
+@import "./assets/base.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+.itemsCenter {
+  position: relative;
+  width: 100%;
+  background: #fafafa;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
 }
-
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+main {
+  height: 100vh;
+  margin: 10rem 0;
+  /* margin: 0 auto; */
 }
 </style>
